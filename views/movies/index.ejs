@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Your Movies</title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <div class="container">
+        <h1>Your Movies</h1>
+        <div class="movie-cards">
+            <% movies.forEach(function(movie) { %>
+                <div class="movie-card">
+                    <h2><a href="/users/<%= user._id %>/movies/<%= movie._id %>"><%= movie.name %></a></h2>
+                </div>
+            <% }) %>
+        </div>
+        <div class="add-movie-container">
+            <a href="/users/<%= user._id %>/movies/new" class="btn">Add Movie</a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Movie Database</p>
+    </footer>
+</body>
+</html>

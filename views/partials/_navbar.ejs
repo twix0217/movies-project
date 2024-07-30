@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- views/partials/_navbar.ejs -->
+    <nav>
+        <% if(user) { %>
+          <a href="/users/<%= user._id %>/movies">View my movies</a>
+          <a href="/community">View all movies</a> <!-- Added link -->
+          <a href="/auth/sign-out">Sign Out</a>
+        <% } else { %>
+          <a href="/auth/sign-in">Sign In</a>
+          <a href="/auth/sign-up">Sign Up</a>
+        <% } %>
+      </nav>
+      
+    
+    
+</body>
+</html>

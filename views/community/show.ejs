@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title><%= movie.name %></title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <div class="container">
+        <div class="movie-card">
+            <h1><%= movie.name %></h1>
+            <p><strong>Genre:</strong> <%= movie.genre %></p>
+            <p><strong>Release Date:</strong> <%= movie.releaseDate.toDateString() %></p>
+            <p><strong>Director:</strong> <%= movie.director %></p>
+            <p><strong>Description:</strong> <%= movie.description %></p>
+            <p><strong>Rating:</strong> <%= movie.rating %></p>
+            <p><strong>Added by:</strong> <%= user.username %></p>
+            <a href="/users/<%= user._id %>/movies/<%= movie._id %>/edit" class="button">Edit Movie</a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Movie Database</p>
+    </footer>
+</body>
+</html>
