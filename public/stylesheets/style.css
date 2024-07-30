@@ -101,6 +101,9 @@ nav a:hover {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 200px; /* Adjust button width */
 }
 
 .card form button:hover {
@@ -138,7 +141,9 @@ h3 {
     text-decoration: none;
     margin-top: 1rem;
     font-size: 16px;
-    width: 100px; /* Set a fixed width for consistency */
+    width: 100%;
+    max-width: 200px; /* Adjust button width */
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
