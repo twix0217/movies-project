@@ -10,9 +10,11 @@
     <%- include('../partials/_navbar.ejs') %>
     <div class="container">
         <div class="movie-card-details">
+            <img src="<%= movie.imageURL %>" alt="">
             <h1><%= movie.name %></h1>
             <p><span>Genre:</span> <%= movie.genre %></p>
             <p><span>Release Date:</span> <%= movie.releaseDate %></p>
+            <p><span>Duration:</span> <%= movie.duration %> mins</p>
             <p><span>Director:</span> <%= movie.director %></p>
             <p><span>Description:</span> <%= movie.description %></p>
             <p><span>Rating:</span> <%= movie.rating %></p>

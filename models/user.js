@@ -6,11 +6,13 @@ const movieSchema = new mongoose.Schema({
       required: true
     },
     genre: String,
+    duration: Number,
     releaseDate: Date,
     director: String,
     description: String,
     rating: Number,
-
+    imageURL: String,
+    
   });
 
   const userSchema = new mongoose.Schema({

@@ -11,6 +11,7 @@
     <div class="container">
         <div class="movie-details-card">
             <h1><%= movie.name %></h1>
+            <img src="<%= movie.imageURL %>" alt="">
             <p><strong>Genre:</strong> <%= movie.genre %></p>
             <p><strong>Release Date:</strong> <%= movie.releaseDate.toDateString() %></p>
             <p><strong>Director:</strong> <%= movie.director %></p>

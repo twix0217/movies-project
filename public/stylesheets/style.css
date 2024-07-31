@@ -325,6 +325,12 @@ movie-card a:hover {
 }
 
 .movie-card-details .buttons .btn {
-    margin-top: 0; /* Ensure buttons are aligned */
-    width: auto; /* Ensure buttons auto-size based on content */
+    margin-top: 0; 
+    width: auto; 
+}
+
+img{
+    height: 500px;
+    width: 500px;
+    
 }
