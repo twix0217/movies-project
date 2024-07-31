@@ -84,12 +84,14 @@ router.put('/:movieId', async (req, res) => {
       return res.status(404).send('Movie not found');
     }
 
-    movie.name = req.body.name;
-    movie.genre = req.body.genre;
-    movie.releaseDate = new Date(req.body.releaseDate);
-    movie.director = req.body.director;
-    movie.description = req.body.description;
-    movie.rating = req.body.rating;
+    // movie.name = req.body.name;
+    // movie.genre = req.body.genre;
+    // movie.releaseDate = new Date(req.body.releaseDate);
+    // movie.director = req.body.director;
+    // movie.description = req.body.description;
+    // movie.rating = req.body.rating;
+
+    movie.set(req.body)
 
     await currentUser.save();
     res.redirect(`/users/${currentUser._id}/movies`);

@@ -29,6 +29,7 @@
                 name="genre" 
                 id="genre" 
                 value="<%= movie.genre %>"
+                required
             >
             <label for="releaseDate">Release Date:</label>
             <input 
@@ -36,6 +37,23 @@
                 name="releaseDate" 
                 id="releaseDate" 
                 value="<%= movie.releaseDate ? movie.releaseDate.toISOString().substring(0, 10) : '' %>"
+                required
+            >
+            <label for="imageURL">Image:</label>
+            <input 
+                type="text" 
+                name="imageURL" 
+                id="imageURL"
+                value="<%= movie.imageURL %>"
+                required
+            >
+            <label for="duration">Duration:</label>
+            <input 
+                type="number" 
+                name="duration" 
+                id="duration" 
+                value="<%= movie.duration %>"
+                required
             >
             <label for="director">Director:</label>
             <input 
@@ -43,6 +61,7 @@
                 name="director" 
                 id="director" 
                 value="<%= movie.director %>"
+                required
             >
             <label for="description">Description:</label>
             <textarea 
@@ -54,12 +73,13 @@
                 name="rating" 
                 id="rating" 
                 value="<%= movie.rating %>"
+                required
             >
             <button type="submit">Update Movie</button>
         </form>
     </div>
     <footer>
-        <p>&copy; 2024 Movie Database</p>
+        <p>&copy; 2024 Movies Database</p>
     </footer>
 </body>
 </html>
