@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/user');
 
-// Display the movies of the currently logged-in user
+
 router.get('/', async (req, res) => {
   try {
     const currentUser = await User.findById(req.session.user._id);
@@ -15,12 +15,11 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Route to display a form for adding a new movie
+
 router.get('/new', async (req, res) => {
   res.render('movies/new.ejs');
 });
 
-// Handle adding a new movie
 router.post('/', async (req, res) => {
   try {
     const currentUser = await User.findById(req.session.user._id);
@@ -34,7 +33,6 @@ router.post('/', async (req, res) => {
   }
 });
 
-// Display details of a specific movie
 router.get('/:movieId', async (req, res) => {
   try {
     const currentUser = await User.findById(req.session.user._id);
@@ -48,7 +46,6 @@ router.get('/:movieId', async (req, res) => {
   }
 });
 
-// Delete a specific movie
 router.delete('/:movieId', async (req, res) => {
   try {
     const currentUser = await User.findById(req.session.user._id);
@@ -61,7 +58,7 @@ router.delete('/:movieId', async (req, res) => {
   }
 });
 
-// Display a form to edit a specific movie
+
 router.get('/:movieId/edit', async (req, res) => {
   try {
     const currentUser = await User.findById(req.session.user._id);
@@ -75,7 +72,7 @@ router.get('/:movieId/edit', async (req, res) => {
   }
 });
 
-// Update a specific movie
+
 router.put('/:movieId', async (req, res) => {
   try {
     const currentUser = await User.findById(req.session.user._id);
