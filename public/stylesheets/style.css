@@ -15,7 +15,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    background-color: #f4f4f9;
+    background-color: lightblue;
     color: #333;
     line-height: 1.6;
 }
